@@ -57,7 +57,7 @@ enum TBoundary {bcUnknown, bcReflect, bcAbsorb, bcMirror, bcCylic};            /
  * The structure to store optical properties
  * Four relevant optical properties are needed
  */
-typedef struct MCXMedium{
+typedef struct __declspec(align(16)) MCXMedium{
 	float mua;                     /**< absorption coefficient (in 1/mm) */
 	float mus;                     /**< scattering coefficient (in 1/mm) */
 	float g;                       /**< anisotropy factor g: -1 to 1 */
